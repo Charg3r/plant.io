@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Registro</title>
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+
+html, body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      }
+      body, div, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 16px;
+      color: #666;
+      }
+      body {
+        background-image: url('img/tm-bg-section-4.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+      }
+      h1 {
+      margin: 0 0 10px 0;
+      font-weight: 400;
+      }
+      .main-block {
+      display: flex;
+      width: 90%;
+      padding: 10px 0; 
+      border-radius: 5px;
+      box-shadow: 1px 1px 8px 0px #666; 
+      background: #fff;
+      }
+      .block-item {
+      width: 50%;
+      padding: 20px; 
+      }
+      .block-item.right {
+      border-left: 1px solid #aaa;
+      }
+      i {
+      width: 50px;
+      font-size: 24px;
+      }
+      .btn {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 40px;
+      margin: 10px 0;
+      outline: none;
+      border: 0;
+      border-radius: 5px;
+      box-shadow: 2px 2px 2px #666;
+      background: #e8e8e8;
+      color: #fff;
+      cursor: pointer;
+      }
+      .btn:hover {
+      transform: scale(1.03);
+      }
+      .btn span {
+      font-size: 16px;
+      }
+      .facebook {
+      background: #3a589e;
+      }
+      .twitter {
+      background: #429cd6;
+      }
+      .google{
+      background: #d34836;
+      }
+
+
+
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, select, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      }
+      h1 {
+      margin: 0;
+      font-weight: 400;
+      }
+      h3 {
+      margin: 12px 0;
+      color:  #4bad42;
+      }
+      .main-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      }
+      form {
+      width: 100%;
+      padding: 20px;
+      }
+      fieldset {
+      border: none;
+      border-top: 1px solid  #4bad42;
+      }
+      .account-details, .personal-details {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      }
+      .account-details >div, .personal-details >div >div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      }
+      .account-details >div, .personal-details >div, input, label {
+      width: 100%;
+      }
+      label {
+      padding: 0 5px;
+      text-align: right;
+      vertical-align: middle;
+      }
+      input {
+      padding: 5px;
+      vertical-align: middle;
+      }
+      .checkbox {
+      margin-bottom: 10px;
+      }
+      select, .children, .gender, .bdate-block {
+      width: calc(100% + 26px);
+      padding: 5px 0;
+      }
+      select {
+      background: transparent;
+      }
+      .gender input {
+      width: auto;
+      } 
+      .gender label {
+      padding: 0 5px 0 0;
+      } 
+      .bdate-block {
+      display: flex;
+      justify-content: space-between;
+      }
+      .birthdate select.day {
+      width: 35px;
+      }
+      .birthdate select.mounth {
+      width: calc(100% - 94px);
+      }
+      .birthdate input {
+      width: 38px;
+      vertical-align: unset;
+      }
+      .checkbox input, .children input {
+      width: auto;
+      margin: -2px 10px 0 0;
+      }
+      .checkbox a {
+      color:  #4bad42;
+      }
+      .checkbox a:hover {
+      color:  #4bad42;
+      }
+      button {
+      width: 100%;
+      padding: 10px 0;
+      margin: 10px auto;
+      border-radius: 5px; 
+      border: none;
+      background:  #4bad42; 
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      }
+      button:hover {
+      background:  #4bad42;
+      }
+      @media (min-width: 568px) {
+      .account-details >div, .personal-details >div {
+      width: 50%;
+      }
+      label {
+      width: 40%;
+      }
+      input {
+      width: 60%;
+      }
+      select, .children, .gender, .bdate-block {
+      width: calc(60% + 16px);
+      }
+      }
+    </style>
+  
+  </head>
+  
+  <body background="img/tm-bg-section-4.jpg">
+
+    <div class="main-block">
+    <form action="/">
+      <h1>Registrate en Plant.io</h1>
+      <fieldset>
+        <legend>
+          <h3>Detalles de la cuenta</h3>
+        </legend>
+        <div  class="account-details">
+          <div><label>Correo*</label><input type="text" name="name" required></div>
+          <div><label>Contrasena*</label><input type="password" name="name" required></div>
+          <div><label>Confirmar correo*</label><input type="text" name="name" required></div>
+          <div><label>Confirmar contrasena*</label><input type="password" name="name" required></div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>
+          <h3>Informacion personal</h3>
+        </legend>
+        <div  class="personal-details">
+          <div>
+            <div><label>Nombre*</label><input type="text" name="name" required></div>
+            <div><label>Telefono*</label><input type="text" name="name" required></div>
+          </div>
+          <div>
+            <div>
+              <label>Genero*</label>
+              <div class="gender">
+                <input type="radio" value="none" id="male" name="gender" required/>
+                <label for="male" class="radio">Masculino</label>
+                <input type="radio" value="none" id="female" name="gender" required/>
+                <label for="female" class="radio">Femenino</label>
+              </div>
+            </div>
+            <div class="birthdate">
+              <label>Cumpleanos*</label>
+              <div class="bdate-block">
+                <select class="day" required>
+                  <option value=""></option>
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                  <option value="05">05</option>
+                  <option value="06">06</option>
+                  <option value="07">07</option>
+                  <option value="08">08</option>
+                  <option value="09">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                  <option value="25">25</option>
+                  <option value="26">26</option>
+                  <option value="27">27</option>
+                  <option value="28">28</option>
+                  <option value="29">29</option>
+                  <option value="30">30</option>
+                  <option value="31">31</option>
+                </select>
+                <select class="mounth" required>
+                  <option value=""></option>
+                  <option value="January">Enero</option>
+                  <option value="February">Febrero</option>
+                  <option value="March">Marzo</option>
+                  <option value="April">Abril</option>
+                  <option value="May">Mayo</option>
+                  <option value="June">Junio</option>
+                  <option value="July">Julio</option>
+                  <option value="August">Agosto</option>
+                  <option value="September">Septiembre</option>
+                  <option value="October">Octubre</option>
+                  <option value="November">Noviembre</option>
+                  <option value="December">Diciembre</option>
+                </select>
+                <input type="text" name="name" required>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>
+          <h3>Terminos y condiciones</h3>
+        </legend>
+        <div  class="terms-mailing">
+          <div class="checkbox">
+            <input type="checkbox" name="checkbox"><span>Acepto los  <a href="#">Terminos y condiciones de Plant.io.</a></span>
+          </div>
+      </fieldset>
+
+      <div class="container-login100-form-btn">
+        <!--
+        <button class="login100-form-btn">
+        </button>
+        --> 
+
+        <a href="index.html" class="index">
+          <div class="desc">
+            <h3>Registrate ahora</h3>
+          </div>
+        </a>
+      </div>
+
+      <div class="main-block">
+        <div class="block-item left">
+          <h1>Registrate con:</h1>
+          <p>Registrate a traves de tu cuenta de Facebook, twitter o google.
+          </p>
+        </div>
+        <div class="block-item right">
+          <button class="btn facebook" data-provider="facebook"><i class="fab fa-facebook-f"></i><span>Facebook</span></button>
+          <button class="btn twitter" data-provider="twitter"><i class="fab fa-twitter"></i><span>Twitter</span></button>
+          <button class="btn google" data-provider="google"><i class="fab fa-google"></i><span>Google</span></button>
+        </div>
+      </div>
+
+
+
+    </form>
+
+
+
+    </div> 
+  </body>
+</html>

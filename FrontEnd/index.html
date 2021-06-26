@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Plant.io</title>
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+    <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link rel="stylesheet" href="css/tooplate-style.css">
+    <!-- tooplate style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.css"
+        integrity="sha512-C7hOmCgGzihKXzyPU/z4nv97W0d9bv4ALuuEbSf6hm93myico9qa0hv4dODThvCsqQUmKmLcJmlpRmCaApr83g=="
+        crossorigin="anonymous" />
+
+    <script>
+        var renderPage = true;
+
+        if (navigator.userAgent.indexOf('MSIE') !== -1
+            || navigator.appVersion.indexOf('Trident/') > 0) {
+            /* Microsoft Internet Explorer detected in. */
+            alert("Please view this in a modern browser such as Chrome or Microsoft Edge.");
+            renderPage = false;
+        }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+        integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+        crossorigin="anonymous">
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.js"
+        integrity="sha512-zO8oeHCxetPn1Hd9PdDleg5Tw1bAaP0YmNvPY8CwcRyUk7d7/+nyElmFrB6f7vg4f7Fv4sui1mcep8RIEShczg=="
+        crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
+        integrity="sha256-t9UJPrESBeG2ojKTIcFLPGF7nHi2vEc7f5A2KpH/UBU="
+        crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+    <!-- Loader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <div class="container">
+        <section class="tm-section-head" id="top">
+            <header id="header" class="text-center tm-text-gray">
+                
+                <h1>PLANT.IO</h1>
+                <p>BIENVENIDO AL SISTEMA DE MONITORIZACION DE TU PLANTA</p>
+            </header>
+
+            <nav class="navbar narbar-light">
+                <a class="navbar-brand tm-text-gray" href="#">
+                    Menu
+                </a>
+                <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <i class="fa fa-navicon tm-fa-toggler-icon"></i>
+                    </span>
+                </button>
+                <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link tm-text-gray" href="#top">Inicio
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link tm-text-gray" href="#tm-section-2">Estadisticas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link tm-text-gray" href="#tm-section-6">Acerca del proyecto</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="navbar navbar-default navbar-fixed-top">
+                <a href="/index.html" class="navbar-brand"></a>
+                <botton class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mydropdown">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </botton>
+
+            </div>
+
+            <div class="collapse navbar-collapse" id="mydropdown">
+
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">Inico</a>
+                    </li>
+                    <li>
+                        <a href="#">Estadisticas</a>
+                    </li>
+                    <li>
+                        <a href="#">Acerca del proyecto</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="row" id="tm-section-1">
+            <div class="col-lg-12 tm-slider-col">
+                <div class="tm-img-slider">
+
+                    <div class="tm-img-slider-item" href="img/gallery-img-02.jpg">
+                        <p class="tm-slider-caption">Monitorea tus plantas estando lejos de casa.</p>
+                        <img src="img/gallery-img-02.jpg" alt="Image" class="tm-slider-img">
+                    </div>
+                    <div class="tm-img-slider-item" href="img/gallery-img-04.jpg">
+                        <p class="tm-slider-caption">Manten tus plantas saludables durante todo año.</p>
+                        <img src="img/gallery-img-04.jpg" alt="Image" class="tm-slider-img">
+                    </div>
+                    <div class="tm-img-slider-item" href="img/gallery-img-03.jpg">
+                        <p class="tm-slider-caption">Conectado a internet para optimizar la experiencia de usuario.</p>
+                        <img src="img/gallery-img-03.jpg" alt="Image" class="tm-slider-img">
+                    </div>
+                    <div class="tm-img-slider-item" href="img/gallery-img-004.jpg">
+                        <p class="tm-slider-caption">Construido con arduino.</p>
+                        <img src="img/gallery-img-004.jpg" alt="Image" class="tm-slider-img">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <p>  </p>
+        <p style="padding-left:20px; font-size:25px;"> Tu planta: </p>
+        
+        <section class="tm-section-2 tm-section-mb" id="tm-section-2">
+            <div class="row">  
+                <div class="col-md-3"> 
+                    <canvas id="myChart1" width="450" height="450"> </canvas> 
+                </div>
+                <div class="col-md-3"> 
+                    <canvas id="myChart2" width="450" height="450"></canvas> 
+                </div>
+                <div class="col-md-3"> 
+                    <canvas id="myChart3" width="450" height="450"></canvas> 
+                </div>
+                <div class="col-md-3"> 
+                    <canvas id="myChart4" width="450" height="450"></canvas> 
+                </div>
+            </div>
+        </section>
+       
+        <section class="tm-section-4 tm-section-mb" id="tm-section-4">
+            <div class="row"> </div>
+        </section>
+
+        <section class="tm-section-5" id="tm-section-6">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="image fit">
+                        <img src="img/tm-sc4-img-1.jpg" class="img-fluid">
+                    </div>
+                </div>
+
+                <div class="col-lg-8 col-md-12 col-sm-12 pl-lg-0">
+                    <div class="media tm-media">
+                        <div class="media-body tm-box-5">
+                            <h2>Implementación del internet de las cosas</h2>
+                            <p class="mb-0">Este fue un proyecto elaborado con la mentoria de los profesores:
+                                <ul>
+                                    <li>Gwendolyne Delgado</li>
+                                    <li>Ramona Garcia</li>
+                                    <li>Atoany Fierro</li>
+                                    <li>Hugo Alejandres</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="media tm-media">
+                        <div class="media-body tm-box-5">
+                            <h2>Objetivo del proyecto</h2>
+                            <p class="mb-0">
+                                Durante 10 semanas, los alumnos diseñarán e implementarán un prototipo de un sistema digital capaz de obtener datos mediante el uso de sensores, procesarlos y depositarlos como información en una plataforma en internet, para su posterior análisis y visualización.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+
+		<ul class="login-more p-t-190">
+			<a href="login.html" class="txt2">
+				<div class="desc">
+					<h8>Cerrar sesion</h8>
+				</div>
+			</ul>
+
+
+    </div>
+
+    <!-- load JS files -->
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <!-- https://popper.js.org/ -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- https://getbootstrap.com/ -->
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <!-- Slick Carousel -->
+
+    <script>
+        function setCarousel() {
+            var slider = $('.tm-img-slider');
+
+            if (slider.hasClass('slick-initialized')) {
+                slider.slick('destroy');
+            }
+
+            if ($(window).width() > 991) {
+                // Slick carousel
+                slider.slick({
+                    autoplay: true,
+                    fade: true,
+                    speed: 800,
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                });
+            } else {
+                slider.slick({
+                    autoplay: true,
+                    fade: true,
+                    speed: 800,
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                });
+            }
+        }
+
+        $(document).ready(function () {
+            if (renderPage) {
+                $('body').addClass('loaded');
+            }
+
+            setCarousel();
+
+            $(window).resize(function () {
+                setCarousel();
+            });
+
+            // Close menu after link click
+            $('.nav-link').click(function () {
+                $('#mainNav').removeClass('show');
+            });
+
+            // https://css-tricks.com/snippets/jquery/smooth-scrolling/
+            // Select all links with hashes
+            $('a[href*="#"]')
+                // Remove links that don't actually link to anything
+                .not('[href="#"]')
+                .not('[href="#0"]')
+                .click(function (event) {
+                    // On-page links
+                    if (
+                        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                        &&
+                        location.hostname == this.hostname
+                    ) {
+                        // Figure out element to scroll to
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                        // Does a scroll target exist?
+                        if (target.length) {
+                            // Only prevent default if animation is actually gonna happen
+                            event.preventDefault();
+                            $('html, body').animate({
+                                scrollTop: target.offset().top + 1
+                            }, 1000, function () {
+                                // Callback after animation
+                                // Must change focus!
+                                var $target = $(target);
+                                $target.focus();
+                                if ($target.is(":focus")) { // Checking if the target was focused
+                                    return false;
+                                } else {
+                                    $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                                    $target.focus(); // Set focus again
+                                };
+                            });
+                        }
+                    }
+                });
+        });
+    </script>
+
+</body>
+
+<script src=Charts/chart1.js></script>
+<script src=Charts/chart2.js></script>
+<script src=Charts/chart3.js></script>
+<script src=Charts/chart4.js></script>
+<script src=Charts/chart5.js></script>
+<script src=Charts/chart6.js></script>
+<script src=Charts/chart7.js></script>
+<script src=Charts/chart8.js></script>
+
+</html>
